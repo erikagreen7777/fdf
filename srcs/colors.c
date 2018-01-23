@@ -6,7 +6,7 @@
 /*   By: egreen <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/21 17:27:19 by egreen            #+#    #+#             */
-/*   Updated: 2018/01/21 17:30:16 by egreen           ###   ########.fr       */
+/*   Updated: 2018/01/23 08:10:04 by egreen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,7 +110,8 @@ void			color_picker(t_data *raw, t_axes *vb)
 			ft_strstr(raw->name, "maps/50-4.fdf"))
 		contrast(raw, vb);
 	else if (ft_strstr(raw->name, "maps/10-70.fdf") ||
-			ft_strstr(raw->name, "maps/20-60.fdf"))
+			ft_strstr(raw->name, "maps/20-60.fdf") ||
+			ft_strstr(raw->name, "maps/elem.fdf"))
 		green(raw, vb);
 	else
 		blue(raw, vb);
