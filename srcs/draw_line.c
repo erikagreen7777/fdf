@@ -6,7 +6,7 @@
 /*   By: egreen <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/23 08:07:23 by egreen            #+#    #+#             */
-/*   Updated: 2018/01/23 08:08:44 by egreen           ###   ########.fr       */
+/*   Updated: 2018/01/23 08:15:35 by egreen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	initialize_points(t_axes *points, t_coord *a, t_coord *b)
 	}
 }
 
-void	contrast(t_data *raw, t_axes *point)
+void	contrast(t_data *raw, t_axes *points)
 {
 	if (points->z <= -3)
 		mlx_pixel_put(raw->id, raw->win, points->x, points->y, 0x00618795);
