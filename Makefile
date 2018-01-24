@@ -9,7 +9,8 @@ SRCS = srcs/main.c\
 	   srcs/validate.c \
 	   srcs/parse.c \
 	   srcs/draw_line.c \
-	   srcs/colors.c
+	   srcs/colors.c \
+	   srcs/sizes.c
 	
 
 FRAMEWORKS = -framework OpenGL -framework AppKit

@@ -26,7 +26,15 @@ void	initialize(t_data *raw, char *str)
 	if (!raw)
 		ft_error("Error: struct initialization");
 	raw->id = mlx_init();
-	raw->win = mlx_new_window(raw->id, W_SIZE, W_SIZE, str);
+	if (ft_strstr(raw->name, "maps/100-6.fdf") || ft_strstr(raw->name, "maps/50-4.fdf") || ft_strstr(raw->name, "maps/pylone.fdf"))
+			raw->win = mlx_new_window(raw->id, 1500, 1500, str);
+	else if (ft_strstr(raw->name, "maps/42.fdf") || ft_strstr(raw->name, "maps/10-2.fdf") || ft_strstr(raw->name, "maps/basictest.fdf") || \
+		ft_strstr(raw->name, "maps/elem.fdf") || ft_strstr(raw->name, "maps/20-60.fdf") || ft_strstr(raw->name, "maps/pyra.fdf") || ft_strstr(raw->name, "maps/10-70.fdf"))
+		raw->win = mlx_new_window(raw->id, 1000, 1000, str);
+	else if (ft_strstr(raw->name, "maps/mars.fdf"))
+		raw->win = mlx_new_window(raw->id, 2500, 2500, str);
+	else
+		raw->win = mlx_new_window(raw->id, W_SIZE, W_SIZE, str);
 	raw->fd = open(str, O_RDONLY);
 }
 

@@ -43,86 +43,16 @@
 # define GREEN30	0x00009900
 # define GREEN25	0x00008000
 # define GREEN20	0x00006600
-# define RADIAN(x)	(x * PI / 180)
+// # define RADIAN(x)	(x * PI / 180)
 # define W_SIZE		1000
 # define MAX(a, b)	((a) > (b) ? (a) : (b))
 # define PI			3.14159265
 # define XANG		(PI / 180) * 45
 # define ZANG		(PI / 180) * 45
-# define ZOOM			20
-# define C_W	(W_SIZE/2) - (raw->width * ZOOM/2) + 500
-# define C_H	(W_SIZE/2) - ((raw->x * ZOOM)/2) - raw->x 
+// # define ZOOM			20
+// # define C_W	(W_SIZE/2) - (raw->width * ZOOM/2) + 500
+// # define C_H	(W_SIZE/2) - ((raw->x * ZOOM)/2) - raw->x 
 
-
-//42.fdf, 10-2.fdf, basictest, elem
-/*# define ZOOM			20
-# define C_W	((W_SIZE/2) - (raw->width * ZOOM/2))
-# define C_H	((W_SIZE/2) - ((raw->x * ZOOM)/2) - raw->x)*/
-
-//100-6.fdf
-/*# define W_SIZE		1500
-# define MAX(a, b)	((a) > (b) ? (a) : (b))
-# define PI			3.14159265
-# define XANG		(PI / 180) * 45
-# define ZANG		(PI / 180) * 45
-# define ZOOM			10
-# define C_W	((W_SIZE/2) - (raw->width * ZOOM/2) + (1000))
-# define C_H	((W_SIZE/2) - ((raw->x * ZOOM)/2) - raw->x)*/
-
-//20-60
-/*# define ZOOM			10
-# define C_W	((W_SIZE/2) - (raw->width * ZOOM/2))
-# define C_H	((W_SIZE/2) - ((raw->x * ZOOM)/2) - raw->x)*/
-
-//50-4
-/*# define W_SIZE		1500
-# define MAX(a, b)	((a) > (b) ? (a) : (b))
-# define PI			3.14159265
-# define XANG		(PI / 180) * 45
-# define ZANG		(PI / 180) * 45
-# define ZOOM			15
-# define C_W	(W_SIZE/2) - (raw->width * ZOOM/2) + 800
-# define C_H	(W_SIZE/2) - ((raw->x * ZOOM)/2) - raw->x*/
-
-//mars
-/*# define W_SIZE		2500
-# define MAX(a, b)	((a) > (b) ? (a) : (b))
-# define PI			3.14159265
-# define XANG		(PI / 180) * 45
-# define ZANG		(PI / 180) * 45
-# define ZOOM			8
-# define C_W	(W_SIZE/2) - (raw->width * ZOOM/2) 
-# define C_H	(W_SIZE/2) - ((raw->x * ZOOM)/2) - 1400*/
-
-//pentenegos, plat, pnp_flat
-/*# define W_SIZE		1000
-# define MAX(a, b)	((a) > (b) ? (a) : (b))
-# define PI			3.14159265
-# define XANG		(PI / 180) * 45
-# define ZANG		(PI / 180) * 45
-# define ZOOM			30
-# define C_W	(W_SIZE/2) - (raw->width * ZOOM/2) 
-# define C_H	(W_SIZE/2) - ((raw->x * ZOOM)/2) - raw->x*/
-
-//pylone
-/*# define W_SIZE		2000
-# define MAX(a, b)	((a) > (b) ? (a) : (b))
-# define PI			3.14159265
-# define XANG		(PI / 180) * 45
-# define ZANG		(PI / 180) * 45
-# define ZOOM			20
-# define C_W	(W_SIZE/2) - (raw->width * ZOOM/2) + 1000
-# define C_H	(W_SIZE/2) - ((raw->x * ZOOM)/2) - raw->x - 500*/
-
-//pyra
-/*# define W_SIZE		1000
-# define MAX(a, b)	((a) > (b) ? (a) : (b))
-# define PI			3.14159265
-# define XANG		(PI / 180) * 45
-# define ZANG		(PI / 180) * 45
-# define ZOOM			20
-# define C_W	(W_SIZE/2) - (raw->width * ZOOM/2) + 500
-# define C_H	(W_SIZE/2) - ((raw->x * ZOOM)/2) - raw->x */
 typedef struct	s_axes
 {
 	int			i;
@@ -177,4 +107,10 @@ t_coord			**parse(char *str, t_data *raw);
 void			draw(t_data *raw, t_coord **data);
 void			draw_line(t_coord *a, t_coord *b, t_data *raw);
 int				destroy_window(t_data *raw);
+void	twenty(t_data *raw, t_coord **data);
+void	fifty(t_data *raw, t_coord **data);
+void 	mars(t_data *raw, t_coord **data);
+void 	pees(t_data *raw, t_coord **data);
+void	pyra(t_data *raw, t_coord **data);
+
 #endif
