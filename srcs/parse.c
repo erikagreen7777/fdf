@@ -6,7 +6,7 @@
 /*   By: egreen <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/23 07:31:06 by egreen            #+#    #+#             */
-/*   Updated: 2018/01/23 16:58:39 by egreen           ###   ########.fr       */
+/*   Updated: 2018/01/23 17:09:39 by egreen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,8 +69,8 @@ static void		hundred(t_data *raw, t_coord **data)
 
 static void		map_picker(t_data *raw, t_coord **data)
 {
-	if (ft_strstr(raw->name, "maps/42.fdf") || ft_strstr(raw->name, "maps/10-\
-			2.fdf") || ft_strstr(raw->name, "maps/basictest.fdf") ||
+	if (ft_strstr(raw->name, "maps/42.fdf") || ft_strstr(raw->name, \
+			"maps/10-2.fdf") || ft_strstr(raw->name, "maps/basictest.fdf") ||
 		ft_strstr(raw->name, "maps/elem.fdf"))
 		first_maps(raw, data);
 	else if (ft_strstr(raw->name, "maps/100-6.fdf"))
