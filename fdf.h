@@ -6,7 +6,7 @@
 /*   By: egreen <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/23 08:18:23 by egreen            #+#    #+#             */
-/*   Updated: 2018/01/23 08:18:25 by egreen           ###   ########.fr       */
+/*   Updated: 2018/01/23 17:02:55 by egreen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,15 +43,11 @@
 # define GREEN30	0x00009900
 # define GREEN25	0x00008000
 # define GREEN20	0x00006600
-// # define RADIAN(x)	(x * PI / 180)
 # define W_SIZE		1000
 # define MAX(a, b)	((a) > (b) ? (a) : (b))
 # define PI			3.14159265
 # define XANG		(PI / 180) * 45
 # define ZANG		(PI / 180) * 45
-// # define ZOOM			20
-// # define C_W	(W_SIZE/2) - (raw->width * ZOOM/2) + 500
-// # define C_H	(W_SIZE/2) - ((raw->x * ZOOM)/2) - raw->x 
 
 typedef struct	s_axes
 {
@@ -96,7 +92,7 @@ typedef struct	s_data
 	char		**str;
 }				t_data;
 
-void 			color_picker(t_data *raw, t_axes *points);
+void			color_picker(t_data *raw, t_axes *points);
 void			contrast(t_data *raw, t_axes *points);
 int				main(int ac, char **av);
 int				mlx_exit(int keycode);
@@ -107,10 +103,10 @@ t_coord			**parse(char *str, t_data *raw);
 void			draw(t_data *raw, t_coord **data);
 void			draw_line(t_coord *a, t_coord *b, t_data *raw);
 int				destroy_window(t_data *raw);
-void	twenty(t_data *raw, t_coord **data);
-void	fifty(t_data *raw, t_coord **data);
-void 	mars(t_data *raw, t_coord **data);
-void 	pees(t_data *raw, t_coord **data);
-void	pyra(t_data *raw, t_coord **data);
+void			twenty(t_data *raw, t_coord **data);
+void			fifty(t_data *raw, t_coord **data);
+void			mars(t_data *raw, t_coord **data);
+void			pees(t_data *raw, t_coord **data);
+void			pyra(t_data *raw, t_coord **data);
 
 #endif
